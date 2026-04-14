@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Super Deluxe Room – Hotel Highway Queen</title>
+<meta name="description" content="Super Deluxe Room at Hotel Highway Queen, Dudu. Spacious interiors, premium bedding, free Wi-Fi, bathtub, 24/7 room service. ₹2,700/night. Best Value."/>
+<link rel="canonical" href="https://hotelhighwayqueen.com/super-deluxe.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://res.cloudinary.com" rel="preconnect"/>
+<style>
+  :root {
+    --bg:#FFFDF5; --bg2:#FFF5E0; --bg3:#FFF0CC;
+    --text:#1A0000; --text2:#4A1010; --muted:#7A3030;
+    --red:#CC0000; --red2:#E82020; --yellow:#E6A800;
+    --border:rgba(204,0,0,0.18); --bory:rgba(230,168,0,0.3);
+    --card:#FFFFFF;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Jost',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; }
+  img{ display:block; max-width:100%; height:auto; }
+  a{ text-decoration:none; }
+  .rd-nav { position:sticky; top:0; z-index:100; background:rgba(255,253,245,0.97); backdrop-filter:blur(12px); border-bottom:2px solid var(--red); padding:12px 4%; display:flex; align-items:center; justify-content:space-between; }
+  .rd-nav-logo { font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; color:var(--yellow); letter-spacing:1px; }
+  .rd-nav-logo em { color:var(--red); font-style:italic; }
+  .rd-back { display:inline-flex; align-items:center; gap:6px; color:var(--muted); font-size:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600; transition:0.3s; }
+  .rd-back:hover { color:var(--red); }
+  .rd-back:hover svg { transform:translateX(-3px); }
+  .rd-back svg { transition:0.3s; }
+  .rd-hero { background:linear-gradient(135deg,#8a6000 0%,#E6A800 100%); padding:32px 4% 28px; color:#1A0000; }
+  .rd-hero-tag { font-size:8px; letter-spacing:5px; text-transform:uppercase; color:rgba(26,0,0,0.6); margin-bottom:8px; display:block; }
+  .rd-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,6vw,64px); font-weight:300; line-height:1; color:#1A0000; }
+  .rd-hero-title em { font-style:italic; color:var(--red); }
+  .rd-hero-stars { color:var(--red); font-size:13px; margin-top:10px; }
+  .rd-hero-meta { font-size:11px; color:rgba(26,0,0,0.7); margin-top:4px; letter-spacing:1px; }
+  .rd-badge { display:inline-block; background:var(--red); color:#fff; font-size:8px; letter-spacing:2px; text-transform:uppercase; font-weight:700; padding:4px 10px; border-radius:2px; margin-top:10px; }
+  .rd-slider-wrap { position:relative; background:#000; overflow:hidden; max-height:560px; user-select:none; }
+  .rd-slider-track { display:flex; transition:transform 0.45s cubic-bezier(.4,0,.2,1); will-change:transform; }
+  .rd-slide { flex:0 0 100%; position:relative; }
+  .rd-slide img { width:100%; height:560px; object-fit:cover; opacity:0.92; display:block; }
+  .rd-arr { position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; background:rgba(10,0,0,0.62); border:2px solid var(--yellow); color:var(--yellow); font-size:20px; font-weight:700; cursor:pointer; z-index:10; display:flex; align-items:center; justify-content:center; transition:0.25s; backdrop-filter:blur(4px); }
+  .rd-arr:hover { background:var(--yellow); color:#1A0000; transform:translateY(-50%) scale(1.08); }
+  .rd-arr-l { left:16px; }
+  .rd-arr-r { right:16px; }
+  .rd-dots { position:absolute; bottom:14px; left:50%; transform:translateX(-50%); display:flex; gap:7px; z-index:10; }
+  .rd-dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer; transition:0.3s; border:none; }
+  .rd-dot.on { background:var(--yellow); width:18px; border-radius:3px; }
+  .rd-counter { position:absolute; top:14px; right:16px; z-index:10; background:rgba(10,0,0,0.65); color:#fff; font-size:10px; padding:5px 11px; border-radius:20px; letter-spacing:1px; backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.15); }
+  .rd-swipe-hint { position:absolute; bottom:44px; left:50%; transform:translateX(-50%); background:rgba(10,0,0,0.5); color:rgba(255,255,255,0.75); font-size:9px; letter-spacing:2px; text-transform:uppercase; padding:4px 12px; border-radius:12px; z-index:10; pointer-events:none; animation:fadeHint 3s 1s forwards; }
+  @keyframes fadeHint { 0%{opacity:1} 70%{opacity:1} 100%{opacity:0} }
+  .rd-thumbs-wrap { background:#1A0000; padding:10px 4%; display:flex; gap:6px; overflow-x:auto; }
+  .rd-thumbs-wrap::-webkit-scrollbar { height:3px; }
+  .rd-thumbs-wrap::-webkit-scrollbar-thumb { background:var(--yellow); }
+  .rd-thumb { flex:0 0 80px; width:80px; height:56px; object-fit:cover; cursor:pointer; opacity:0.5; border:2px solid transparent; border-radius:2px; transition:0.25s; }
+  .rd-thumb.on { opacity:1; border-color:var(--yellow); }
+  .rd-thumb:hover { opacity:0.85; }
+  .rd-body { display:grid; grid-template-columns:1fr 340px; gap:0; max-width:1400px; margin:0 auto; }
+  .rd-main { padding:36px 5% 60px; border-right:1px solid var(--border); }
+  .rd-side { padding:32px 28px 60px; background:var(--bg2); }
+  .rd-sec-tag { font-size:8px; letter-spacing:4px; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:6px; display:block; }
+  .rd-sec-title { font-family:'Cormorant Garamond',serif; font-size:clamp(20px,3vw,30px); font-weight:300; color:var(--text); margin-bottom:10px; }
+  .rd-line { width:40px; height:3px; background:linear-gradient(to right,var(--red),var(--yellow)); border-radius:2px; margin-bottom:20px; }
+  .rd-desc { font-size:13px; line-height:2; color:var(--muted); margin-bottom:30px; }
+  .rd-amenities { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:32px; }
+  .rd-amenity { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--text2); padding:10px 12px; background:var(--card); border:1px solid var(--border); border-radius:3px; }
+  .rd-amenity::before { content:'✓'; color:var(--yellow); font-weight:900; font-size:13px; flex-shrink:0; }
+  .rd-cap-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:30px; }
+  .rd-cap-item { display:flex; align-items:center; gap:7px; padding:10px 16px; background:var(--card); border:1px solid var(--border); border-left:3px solid var(--yellow); font-size:12px; color:var(--text); }
+  .rd-cap-item strong { color:var(--yellow); font-family:'Cormorant Garamond',serif; font-size:18px; }
+  .rd-price-box { background:var(--card); border:1px solid var(--border); border-top:4px solid var(--yellow); padding:24px; margin-bottom:18px; }
+  .rd-price-label { font-size:8px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:6px; font-weight:700; }
+  .rd-price-val { font-family:'Cormorant Garamond',serif; font-size:48px; color:var(--yellow); font-weight:300; line-height:1; }
+  .rd-price-note { font-size:11px; color:var(--muted); margin-top:4px; }
+  .rd-price-tax { font-size:10px; color:var(--yellow); }
+  .rd-best-badge { background:var(--yellow); color:#1A0000; font-size:8px; letter-spacing:2px; text-transform:uppercase; font-weight:800; padding:3px 9px; border-radius:2px; display:inline-block; margin-top:8px; }
+  .rd-btn-book { display:block; width:100%; text-align:center; background:var(--yellow); color:#1A0000; padding:14px; font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:800; font-family:'Jost',sans-serif; border-radius:3px; transition:0.3s; margin-bottom:10px; }
+  .rd-btn-book:hover { filter:brightness(1.1); transform:translateY(-1px); }
+  .rd-btn-wa { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; text-align:center; background:transparent; color:#25D366; padding:13px; font-size:10px; letter-spacing:2px; text-transform:uppercase; font-weight:700; font-family:'Jost',sans-serif; border:1.5px solid #25D366; border-radius:3px; transition:0.3s; margin-bottom:10px; }
+  .rd-btn-wa:hover { background:#25D366; color:#fff; }
+  .rd-btn-call { display:flex; align-items:center; justify-content:center; gap:7px; width:100%; text-align:center; background:transparent; color:var(--text2); padding:11px; font-size:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600; font-family:'Jost',sans-serif; border:1px solid var(--border); border-radius:3px; transition:0.3s; }
+  .rd-btn-call:hover { border-color:var(--yellow); color:var(--yellow); }
+  .rd-info-item { display:flex; gap:11px; align-items:flex-start; margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--border); }
+  .rd-info-item:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+  .rd-info-icon { width:32px; height:32px; background:var(--yellow); display:flex; align-items:center; justify-content:center; flex-shrink:0; border-radius:2px; color:#1A0000; font-size:14px; }
+  .rd-info-t { font-size:8px; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); margin-bottom:2px; font-weight:700; }
+  .rd-info-v { font-size:12px; color:var(--muted); line-height:1.6; }
+  .rd-policy { background:var(--bg3); border:1px solid var(--bory); padding:14px 18px; border-radius:3px; margin-top:16px; }
+  .rd-policy-title { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--text); font-weight:700; margin-bottom:8px; }
+  .rd-policy li { font-size:11px; color:var(--muted); margin-left:14px; line-height:1.9; }
+  .rd-footer { background:#1A0000; border-top:3px solid var(--yellow); padding:20px 4%; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .rd-footer-t { font-size:11px; color:rgba(255,255,255,0.5); }
+  .rd-footer-back { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); font-weight:700; transition:0.3s; }
+  .rd-footer-back:hover { color:#fff; }
+  @media(max-width:900px) { .rd-body{grid-template-columns:1fr;} .rd-side{border-top:3px solid var(--yellow);} .rd-main{border-right:none;padding:28px 4% 40px;} .rd-slide img{height:300px;} .rd-slider-wrap{max-height:300px;} .rd-arr{width:38px;height:38px;font-size:16px;} }
+  @media(max-width:600px) { .rd-amenities{grid-template-columns:1fr;} .rd-slide img{height:240px;} .rd-slider-wrap{max-height:240px;} }
+</style>
+</head>
+<body>
+
+<nav class="rd-nav">
+  <a class="rd-nav-logo" href="index.html">Hotel Highway <em>Queen</em></a>
+  <a class="rd-back" href="index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    Back to Rooms
+  </a>
+</nav>
+
+<div class="rd-hero">
+  <span class="rd-hero-tag">Category 02 · Premium</span>
+  <h1 class="rd-hero-title">Super Deluxe <em>Room</em></h1>
+  <div class="rd-hero-stars">★★★★★</div>
+  <div class="rd-hero-meta">4.9 — 145+ verified ratings · Hotel Highway Queen, Dudu</div>
+  <span class="rd-badge">⭐ Best Value</span>
+</div>
+
+<div class="rd-slider-wrap" id="sliderWrap">
+  <div class="rd-slider-track" id="sliderTrack">
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634140/DSC09437_xwrser.jpg" alt="Super Deluxe view 1" loading="eager"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634143/DSC09439_xdouwh.jpg" alt="Super Deluxe view 2" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634145/DSC09443_zfn1id.jpg" alt="Super Deluxe view 3" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634150/DSC09448_gkrdyq.jpg" alt="Super Deluxe view 4" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634155/DSC09442_ve1vca.jpg" alt="Super Deluxe view 5" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634156/DSC09457_ph3p3g.jpg" alt="Super Deluxe view 6" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634161/DSC09450_j0fd1n.jpg" alt="Super Deluxe view 7" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634166/DSC09463_zmbqte.jpg" alt="Super Deluxe view 8" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634169/DSC09466_h4r9lg.jpg" alt="Super Deluxe view 9" loading="lazy"/></div>
+    <div class="rd-slide"><img src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:good,w_1400/v1775634166/DSC09458_r1jhmc.jpg" alt="Super Deluxe view 10" loading="lazy"/></div>
+  </div>
+  <button class="rd-arr rd-arr-l" onclick="slide(-1)" aria-label="Previous">&#8249;</button>
+  <button class="rd-arr rd-arr-r" onclick="slide(1)" aria-label="Next">&#8250;</button>
+  <div class="rd-dots" id="dots"></div>
+  <div class="rd-counter" id="counter">1 / 10</div>
+  <div class="rd-swipe-hint">← Swipe to explore →</div>
+</div>
+
+<div class="rd-thumbs-wrap">
+  <img class="rd-thumb on" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634140/DSC09437_xwrser.jpg" alt="View 1" loading="lazy" onclick="goTo(0,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634143/DSC09439_xdouwh.jpg" alt="View 2" loading="lazy" onclick="goTo(1,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634145/DSC09443_zfn1id.jpg" alt="View 3" loading="lazy" onclick="goTo(2,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634150/DSC09448_gkrdyq.jpg" alt="View 4" loading="lazy" onclick="goTo(3,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634155/DSC09442_ve1vca.jpg" alt="View 5" loading="lazy" onclick="goTo(4,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634156/DSC09457_ph3p3g.jpg" alt="View 6" loading="lazy" onclick="goTo(5,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634161/DSC09450_j0fd1n.jpg" alt="View 7" loading="lazy" onclick="goTo(6,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634166/DSC09463_zmbqte.jpg" alt="View 8" loading="lazy" onclick="goTo(7,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634169/DSC09466_h4r9lg.jpg" alt="View 9" loading="lazy" onclick="goTo(8,this)"/>
+  <img class="rd-thumb" src="https://res.cloudinary.com/duuu0bjy5/image/upload/f_auto,q_auto:eco,w_160/v1775634166/DSC09458_r1jhmc.jpg" alt="View 10" loading="lazy" onclick="goTo(9,this)"/>
+</div>
+
+<div class="rd-body">
+  <div class="rd-main">
+    <span class="rd-sec-tag">About This Room</span>
+    <h2 class="rd-sec-title">Premium Comfort, <em style="font-style:italic;color:var(--yellow);">Unmatched Value</em></h2>
+    <div class="rd-line"></div>
+    <p class="rd-desc">
+      Our most popular choice — the Super Deluxe Room delivers a premium hotel experience that feels far above its price point. With a spacious layout, elegant décor, a luxurious bathtub, and meticulous attention to every detail, this room is designed for guests who want the very best without compromise. Ideal for couples, business travelers, and anyone who simply deserves a little extra. Rated 4.9 stars by our guests — and for good reason.
+    </p>
+    <span class="rd-sec-tag">सुविधाएँ / Amenities</span>
+    <div class="rd-line" style="margin-top:6px;"></div>
+    <div class="rd-amenities">
+      <div class="rd-amenity">Spacious Premium Room</div>
+      <div class="rd-amenity">Free High-Speed WiFi</div>
+      <div class="rd-amenity">Smart LED TV</div>
+      <div class="rd-amenity">Air Conditioning (AC)</div>
+      <div class="rd-amenity">Luxurious Bathtub</div>
+      <div class="rd-amenity">Free Parking</div>
+      <div class="rd-amenity">Enhanced Security</div>
+      <div class="rd-amenity">Daily Housekeeping</div>
+      <div class="rd-amenity">24/7 Room Service</div>
+      <div class="rd-amenity">Attached Bathroom</div>
+      <div class="rd-amenity">King-size Bed</div>
+      <div class="rd-amenity">Mini Work Desk</div>
+    </div>
+    <span class="rd-sec-tag">Capacity &amp; Details</span>
+    <div class="rd-line" style="margin-top:6px;"></div>
+    <div class="rd-cap-row">
+      <div class="rd-cap-item"><strong>2–3</strong> Guests max</div>
+      <div class="rd-cap-item"><strong>1</strong> Bedroom</div>
+      <div class="rd-cap-item">Check-in <strong>12 PM</strong></div>
+      <div class="rd-cap-item">Check-out <strong>10 AM</strong></div>
+    </div>
+  </div>
+
+  <div class="rd-side">
+    <div class="rd-price-box">
+      <div class="rd-price-label">Starting from</div>
+      <div class="rd-price-val">₹2,700</div>
+      <div class="rd-price-note">per night</div>
+      <div class="rd-price-tax">+ applicable taxes</div>
+      <div class="rd-best-badge">⭐ Best Value Pick</div>
+    </div>
+    <a class="rd-btn-book" href="index.html#booking">📅 Book This Room</a>
+    <a class="rd-btn-wa" href="https://wa.me/919414449992?text=Hello!%20I%20want%20to%20book%20Super%20Deluxe%20Room." target="_blank">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp Us
+    </a>
+    <a class="rd-btn-call" href="tel:+919414449992">📞 Call +91-94144-49992</a>
+    <div style="margin-top:28px;">
+      <div class="rd-info-item">
+        <div class="rd-info-icon">📍</div>
+        <div><div class="rd-info-t">Location</div><div class="rd-info-v">Ram Nagar, Dudu<br/>Jaipur–Ajmer Highway (NH-48)</div></div>
+      </div>
+      <div class="rd-info-item">
+        <div class="rd-info-icon">⏰</div>
+        <div><div class="rd-info-t">Timings</div><div class="rd-info-v">Check-in: 12:00 PM<br/>Check-out: 10:00 AM</div></div>
+      </div>
+      <div class="rd-info-item">
+        <div class="rd-info-icon">💳</div>
+        <div><div class="rd-info-t">Payment</div><div class="rd-info-v">Cash · UPI · Debit / Credit Card</div></div>
+      </div>
+    </div>
+    <div class="rd-policy">
+      <div class="rd-policy-title">House Policies</div>
+      <ul>
+        <li>Valid photo ID required at check-in</li>
+        <li>No smoking inside the room</li>
+        <li>Pets not allowed</li>
+        <li>Free cancellation before 24hrs</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="rd-footer">
+  <span class="rd-footer-t">© Hotel Highway Queen, Dudu, Rajasthan</span>
+  <a class="rd-footer-back" href="index.html">← Back to All Rooms</a>
+</div>
+
+<script>
+  var total = 10, cur = 0;
+  var track = document.getElementById('sliderTrack');
+  var counter = document.getElementById('counter');
+  var dotsEl = document.getElementById('dots');
+  var thumbs = document.querySelectorAll('.rd-thumb');
+  for(var i=0;i<total;i++){
+    var d = document.createElement('button');
+    d.className='rd-dot'+(i===0?' on':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    (function(idx){ d.onclick=function(){ goTo(idx,thumbs[idx]); }; })(i);
+    dotsEl.appendChild(d);
+  }
+  function updateUI(){
+    track.style.transform='translateX(-'+cur*100+'%)';
+    counter.textContent=(cur+1)+' / '+total;
+    document.querySelectorAll('.rd-dot').forEach(function(d,i){ d.classList.toggle('on',i===cur); });
+    thumbs.forEach(function(t,i){ t.classList.toggle('on',i===cur); });
+  }
+  function slide(dir){ cur=(cur+dir+total)%total; updateUI(); }
+  function goTo(idx){ cur=idx; updateUI(); }
+  var sx=0;
+  var wrap=document.getElementById('sliderWrap');
+  wrap.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
+  wrap.addEventListener('touchend',function(e){ var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) slide(dx<0?1:-1); },{passive:true});
+  document.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft') slide(-1); if(e.key==='ArrowRight') slide(1); });
+</script>
+</body>
+</html>
