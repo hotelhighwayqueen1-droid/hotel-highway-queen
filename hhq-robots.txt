@@ -1,4 +1,115 @@
+# =============================================================
+# robots.txt — Hotel Highway Queen
+# Domain: https://hotelhighwayqueen.com
+# Updated: August 2026
+# =============================================================
+
+# -------------------------------------------------------
+# All search engine crawlers — general rules
+# -------------------------------------------------------
 User-agent: *
 Allow: /
 
-Sitemap: https://hotelhighwayqueen.com/sitemap.xml
+# Block utility / non-content files
+Disallow: /cdn-cgi/
+Disallow: /*.json$
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# Allow all HTML pages explicitly
+Allow: /*.html$
+Allow: /*.xml$
+Allow: /*.ico$
+
+# -------------------------------------------------------
+# Google — main crawler
+# -------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# Allow Google Image crawler
+User-agent: Googlebot-Image
+Allow: /
+
+# -------------------------------------------------------
+# Bing / Microsoft
+# -------------------------------------------------------
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 3
+
+# -------------------------------------------------------
+# Other major search engines
+# -------------------------------------------------------
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 5
+
+# -------------------------------------------------------
+# SEO / Analytics crawlers — allow
+# -------------------------------------------------------
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+# -------------------------------------------------------
+# Aggressive / bad bots — block
+# -------------------------------------------------------
+User-agent: MauiBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# -------------------------------------------------------
+# Sitemap Location
+# -------------------------------------------------------
+Sitemap: https://hotelhighwayqueen.com/hhq-sitemap.xml
+
+# -------------------------------------------------------
+# Host declaration
+# -------------------------------------------------------
+Host: https://hotelhighwayqueen.com
