@@ -76,7 +76,7 @@ h2::after{content:"";display:block;width:48px;height:3px;margin:10px 0 14px;bord
 .key h2{color:#fff}.key .lead{color:rgba(255,255,255,.82)}
 .kg{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
 .kt{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px 14px 14px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(230,168,0,.5);animation:edge 3.6s ease-in-out infinite;transition:transform .25s,background .25s}
-.kt:nth-child(2n){animation-delay:.6s}.kt:nth-child(3n){animation-delay:1.2s}
+.kt:nth-child(2n){animation-delay:.6s}.kt:nth-child(3n){animation-delay:1.2s}@media(max-width:699px){.kt:last-child:nth-child(odd){grid-column:1/-1}}
 .ki{width:42px;height:42px;display:grid;place-items:center;font-size:21px;border-radius:12px;background:var(--gold);transition:transform .25s}
 .kt h3{font-size:22px;line-height:1.1;margin-top:4px}
 .kt p{font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82);flex:1}
@@ -138,7 +138,7 @@ footer p+p{margin-top:8px}
 @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 @keyframes drift{to{transform:translate(-40px,30px) scale(1.15)}}
 @media(hover:hover){.kt:hover{transform:translateY(-5px);background:rgba(255,255,255,.14)}.kt:hover .ki{transform:rotate(-8deg) scale(1.1)}.btn:hover{transform:translateY(-3px)}.fc:hover{transform:translateY(-6px);box-shadow:0 26px 40px -18px rgba(120,0,0,.65)}.fc:hover .go{gap:14px;background:var(--red-d)}.nav a:hover{background:var(--red);color:#fff}.grp li a:hover{padding-left:8px;color:var(--red)}.sb:hover{background:var(--red);color:#fff}.sb.f:hover{background:#0A6633}.ota a:hover{transform:translateY(-2px);border-color:var(--gold)}}
-@media(min-width:700px){.key{padding:34px 28px 28px}.kg{grid-template-columns:repeat(3,1fr)}body{padding-bottom:0}.sticky{display:none}.cta{grid-template-columns:repeat(3,1fr)}.btn{flex-direction:column;gap:6px;min-height:92px}.feat,.rooms{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr 1fr}.ota{grid-template-columns:repeat(3,1fr)}.room h3{padding-right:0;margin-top:8px}.row{grid-template-columns:1fr}}
+@media(min-width:700px){.key{padding:34px 28px 28px}.kg{grid-template-columns:repeat(3,1fr)}.kt:last-child:nth-child(3n+1){grid-column:1/-1}.kt:last-child:nth-child(3n+2){grid-column:span 2}body{padding-bottom:0}.sticky{display:none}.cta{grid-template-columns:repeat(3,1fr)}.btn{flex-direction:column;gap:6px;min-height:92px}.feat,.rooms{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr 1fr}.ota{grid-template-columns:repeat(3,1fr)}.room h3{padding-right:0;margin-top:8px}.row{grid-template-columns:1fr}}
 @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -201,7 +201,7 @@ footer p+p{margin-top:8px}
 
 <section class="key" id="key" aria-labelledby="h-key">
   <h2 id="h-key">Hotel essentials: book, eat, stay, celebrate</h2>
-  <p class="lead">The six pages guests open most before they travel. Each one has live contact details, rates or menu information.</p>
+  <p class="lead">The pages guests open most before they travel. Each one has live contact details, rates or menu information.</p>
   <div class="kg">
     <a class="kt" href="https://hotelhighwayqueen.com/contact-book-hotel-dudu-nh48.html"><span class="ki" aria-hidden="true">📞</span><span class="bd">24 hrs</span><h3>Contact &amp; Book</h3><p>Call, WhatsApp, map, distances, menu and FAQ.</p><span class="go">Open page →</span></a>
     <a class="kt" href="https://hotelhighwayqueen.com/offers-packages-dudu-nh48.html"><span class="ki" aria-hidden="true">🏷️</span><span class="bd">30% OFF</span><h3>Room Offers</h3><p>Deluxe ₹2,200, Balcony ₹2,400, Super Deluxe ₹2,700 + GST.</p><span class="go">See offers →</span></a>
@@ -209,6 +209,11 @@ footer p+p{margin-top:8px}
     <a class="kt" href="https://hotelhighwayqueen.com/wedding-guest-group-stay-dudu.html"><span class="ki" aria-hidden="true">💍</span><span class="bd">Up to 26 rooms</span><h3>Wedding &amp; Group Stay</h3><p>Guest rooms for weddings and groups, subject to availability.</p><span class="go">Enquire now →</span></a>
     <a class="kt" href="https://hotelhighwayqueen.com/restaurant-hub.html"><span class="ki" aria-hidden="true">🍽️</span><span class="bd">4.8★</span><h3>Restaurant Hub</h3><p>Best restaurant on NH-48: thali, Jain, pizza, truck parking.</p><span class="go">Explore food →</span></a>
     <a class="kt" href="https://hotelhighwayqueen.com/hotel-information.html"><span class="ki" aria-hidden="true">ℹ️</span><span class="bd">Quick info</span><h3>Hotel Information</h3><p>Rooms, timings, parking, WiFi, EV charging and payments.</p><span class="go">Quick view →</span></a>
+    <a class="kt" href="https://hotelhighwayqueen.com/pure-veg-restaurant-dudu-nh48.html"><span class="ki" aria-hidden="true">🥗</span><span class="bd">100% veg</span><h3>Pure Veg Restaurant</h3><p>Whole kitchen vegetarian, with a separate Jain section. Open 24 hours.</p><span class="go">See pure veg →</span></a>
+    <a class="kt" href="https://hotelhighwayqueen.com/breakfast-nashta-dudu-nh48.html"><span class="ki" aria-hidden="true">🌅</span><span class="bd">5:30 AM</span><h3>Breakfast on NH-48</h3><p>Aloo paratha, chole bhature, masala tea and lassi from 5:30 AM.</p><span class="go">See breakfast →</span></a>
+    <a class="kt" href="https://hotelhighwayqueen.com/dudu-me-restaurant-1.html"><span class="ki" aria-hidden="true">🪔</span><span class="bd" lang="hi">हिंदी</span><h3>Restaurant in Dudu (Hindi)</h3><p>24-hour pure veg restaurant, thali, Jain food and rooms, in Hindi.</p><span class="go">Open Hindi page →</span></a>
+    <a class="kt" href="https://hotelhighwayqueen.com/bus-group-meal-booking-dudu-nh48-2.html"><span class="ki" aria-hidden="true">🚌</span><span class="bd">Groups</span><h3>Bus &amp; Group Meals</h3><p>Pre-book group meals on WhatsApp. Free bus and truck parking.</p><span class="go">Book group meal →</span></a>
+    <a class="kt" href="https://hotelhighwayqueen.com/offers-packages-dudu-nh48%20(1).html"><span class="ki" aria-hidden="true">📋</span><span class="bd">Terms &amp; FAQ</span><h3>Room Offer Terms &amp; FAQ</h3><p>30% OFF explained: GST, offer dates, availability and payment.</p><span class="go">Read terms →</span></a>
   </div>
 </section>
 
