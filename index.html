@@ -818,9 +818,9 @@ object-src 'none';" http-equiv="Content-Security-Policy"/></head>
 <li><a data-en="Home" data-hi="होम" href="#home">Home</a></li>
 <li><a data-en="About" data-hi="हमारे बारे में" href="#about">About</a></li>
 <li><a data-en="Rooms" data-hi="कमरे" href="#rooms">Rooms</a></li>
-<li><a data-en="Dining" data-hi="भोजन" href="restaurant_2.html">Dining</a></li>
+<li><a data-en="Dining" data-hi="भोजन" href="https://hotelhighwayqueen.com/restaurant-hub.html">Dining</a></li>
 <li><a data-en="Gallery" data-hi="गैलरी" href="#gallery">Gallery</a></li>
-<li><a data-en="Events" data-hi="इवेंट" href="#events">Events</a></li>
+<li><a data-en="Queen Hub" data-hi="क्वीन हब" href="https://hotelhighwayqueen.com/highway-queen-hub.html">Queen Hub</a></li>
 <li><a data-en="Location" data-hi="स्थान" href="#location">Location</a></li>
 <li><a data-en="Blog" data-hi="ब्लॉग" href="highway-guide.html">Blog</a></li>
 <li><a data-en="Restaurant Guide" data-hi="रेस्टोरेंट गाइड" href="restaurant-guide.html">Restaurant Guide</a></li>
@@ -2534,7 +2534,7 @@ Delhi → Jaipur → <strong style="color:var(--text);">Dudu (Charge Here)</stro
       } else {
         nl.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:' +
           (isDark ? '#1A0000' : '#FFF5E0') +
-          ';padding:20px 4%;gap:14px;z-index:800;border-bottom:2px solid var(--red);';
+          ';padding:20px 4%;gap:14px;z-index:800;border-bottom:2px solid var(--red);box-sizing:border-box;max-height:calc(100vh - 62px);max-height:calc(100dvh - 62px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;';
       }
     }
 
